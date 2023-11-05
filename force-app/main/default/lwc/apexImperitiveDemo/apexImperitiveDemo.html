@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 08-21-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="Apex imperitive">
+        <lightning-button 
+            variant="brand" 
+            label="Get Accounts" 
+            title="Get Accounts" 
+            onclick={handleClick} 
+            class="slds-m-left_x-small">
+        </lightning-button>
+        <template lwc:if={accounts}>
+            <template for:each={accounts} for:item=account>
+                <div class="slds-box" key={account.Id}>
+                    <p>Name - {account.Name}</p>
+                    <p>Type - {account.Type}</p>
+                    <p>Industry - {account.Industry}</p>
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+</template>

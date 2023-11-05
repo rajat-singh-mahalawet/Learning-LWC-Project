@@ -1,0 +1,31 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 08-21-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="Apex with Param">
+        <div class="slds-var-m-around_medium">
+        <lightning-combobox
+            name="Type"
+            label="Type"
+            value={value}
+            placeholder="Select Type"
+            options={options}
+            onchange={handleChange} >
+        </lightning-combobox>
+        <template lwc:if={accounts}>
+            <template for:each={accounts} for:item=account>
+                <div class="slds-box" key={account.Id}>
+                    <p>Name - {account.Name}</p>
+                    <p>Type - {account.Type}</p>
+                    <p>Industry - {account.Industry}</p>
+                </div>
+            </template>
+        </template>
+    </div>
+    </lightning-card>
+    
+</template>

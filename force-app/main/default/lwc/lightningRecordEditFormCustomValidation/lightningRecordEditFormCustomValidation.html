@@ -1,0 +1,20 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 08-09-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="Custom Validation">
+        <lightning-record-edit-form
+        object-api-name={accountObject}
+        onsubmit={formSubmitHandler}
+        onsuccess={successHandler}
+        onerror={errorHandler}
+        >
+        <lightning-input label="Name" value={inputValue} onkeyup={handleInput}></lightning-input>
+        <lightning-button type="submit" label="Create Account"></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card> 
+</template>

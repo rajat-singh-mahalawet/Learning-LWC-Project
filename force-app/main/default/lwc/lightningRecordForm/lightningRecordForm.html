@@ -1,0 +1,60 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 08-08-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="Create record using lightning-record-form">
+        <lightning-record-form
+        object-api-name={accountObject}
+        fields={fields}
+        onsuccess={successHandler}
+        >
+        </lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="Dsiplay record using lightning-record-form">
+        <lightning-record-form
+        record-id="0010w000017JxPWAA0"
+        object-api-name={accountObject}
+        fields={fields}
+        >
+        </lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="Dsiplay record read only using lightning-record-form">
+        <lightning-record-form
+        record-id="0010w000017JxPWAA0"
+        object-api-name={accountObject}
+        fields={fields}
+        mode="readonly"
+        >
+        </lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="Dsiplay record edit using lightning-record-form">
+        <lightning-record-form
+        record-id="0010w000017JxPWAA0"
+        object-api-name={accountObject}
+        fields={fields}
+        columns="3"
+        mode="edit"
+        >
+        </lightning-record-form>
+    </lightning-card>
+
+    
+    <lightning-card title="Dsiplay record edit using layout lightning-record-form">
+        <lightning-record-form
+        record-id="0010w000017JxPWAA0"
+        object-api-name={accountObject}
+        columns="3"
+        mode="edit"
+        layout-type="Compact"
+        >
+        </lightning-record-form>
+    </lightning-card>
+    
+</template>

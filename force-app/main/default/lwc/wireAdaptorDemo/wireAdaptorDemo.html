@@ -1,0 +1,43 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 08-11-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="Wire using function">
+      <template lwc:if={userDetail}>
+          <div>Name: {userDetail.Name.value}</div>
+          <div>Email: {userDetail.Email.value}</div>
+      </template>
+
+    </lightning-card> 
+
+    <lightning-card title="Wire using property">
+      <div>Id: {userId}</div>
+      <template lwc:if={userDetailProperty.data}>
+      <div>Name: {userDetailProperty.data.fields.Name.value}</div>
+      <div>Email: {userDetailProperty.data.fields.Email.value}</div>
+    </template>
+  </lightning-card> 
+
+  <lightning-card title="Wire using functionfor ObjectInfo ">
+    <template lwc:if={objectInfoData}>
+    <div>Name: {objectInfoData.apiName}</div>
+    <!-- <div>Email: {objectInfoData.fields.AccountNumber.apiName}</div> -->
+  </template>
+</lightning-card> 
+
+<lightning-card title="Wire using functionfor ObjectInfo ">
+  <template lwc:if={objectInfosData}>
+    <template for:each={objectInfosData.results} for:item="obj">
+      <div key={obj.result.apiName}>
+        <div>Name: {obj.result.apiName}</div>
+    </div>
+  <!-- <div>Email: {objectInfoData.fields.AccountNumber.apiName}</div> -->
+    </template>
+  </template>
+</lightning-card> 
+
+</template>

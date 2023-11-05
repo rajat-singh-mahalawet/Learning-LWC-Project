@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 07-24-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <h1>Hey I am heading</h1>
+    <template for:each={userNames} for:item=user>
+        <div class="name" key={user}>{user}</div>
+    </template>
+
+    <button onclick={fetchDetailHandler}>FetchDetails</button>
+
+
+    
+</template>

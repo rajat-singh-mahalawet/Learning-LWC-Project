@@ -1,0 +1,35 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 08-22-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="Search your Books">
+        <div class="slds-var-p-around_medium">
+            <lightning-input type="search" label="Search" value={searchkey} onchange={changeHandler}></lightning-input>
+            <template lwc:if={bookList}>
+                <div class="slds-box">
+                <lightning-layout multiple-rows>
+                    <template for:each={bookList} for:item="book">
+                        <lightning-layout-item size="3" flexibility="auto" padding="around-small" key={book.id}>
+                            <div class="custom-box slds-box slds-text-align_center">
+                            <template lwc:if={book.volumeInfo.imageLinks}>
+                                <img src={book.volumeInfo.imageLinks.smallThumbnail} height="200px"></img>
+                            </template>
+                            <div class="slds-text-heading_small slds-var-p-around_medium"><strong>{book.volumeInfo.title}</strong> </div>
+                            <div >Publish Date: {book.volumeInfo.publishedDate} </div>
+                            <div >Average Rating: {book.volumeInfo.averageRating}</div>
+                        </div>
+                        </lightning-layout-item>
+
+
+                    </template>
+                </lightning-layout>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

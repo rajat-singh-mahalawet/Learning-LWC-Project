@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 08-15-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="picklistby recordid">
+    <template lwc:if={typeOptions}>
+        <lightning-combobox
+            name="Type"
+            label="Account Type"
+            value={selectedTypeValue}
+            placeholder="Select Type"
+            options={typeOptions}
+            onchange={handleChange} >
+        </lightning-combobox>
+        <p>Selected value is: {selectedTypeValue}</p>
+    </template>
+
+    <template lwc:if={cleanStatusOptions}>
+        <lightning-combobox
+            name="CleanStatus"
+            label="Account Clean Status"
+            value={selectedStatusValue}
+            placeholder="Select Status"
+            options={cleanStatusOptions}
+            onchange={handleChange} >
+        </lightning-combobox>
+        <p>Selected value is: {selectedStatusValue}</p>
+    </template>
+</lightning-card>    
+</template>

@@ -1,0 +1,43 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 07-24-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="Quiz App In LWC">
+        <div class="slds-m-around_medium">
+            <form>
+            <template for:each={quizQuestion} for:item="quiz">
+                <div key={quiz.id} class="slds-m-bottom_medium">
+                    <div key={quiz.id}><strong>{quiz.id} - {quiz.question}</strong></div>
+                    <div class="slds-grid slds-gutters slds-p-bottom_medium">
+                        <div class="slds-col">
+                            <input type="radio" name={quiz.id} value="a" onchange={changeHandler}/>
+                            {quiz.answers.a}
+                        </div>
+                        <div class="slds-col">
+                            <input type="radio" name={quiz.id} value="b" onchange={changeHandler}/>
+                            {quiz.answers.b}
+                        </div>
+                        <div class="slds-col">
+                            <input type="radio" name={quiz.id} value="c" onchange={changeHandler}/>
+                            {quiz.answers.c}
+                        </div>
+                    </div>
+                </div>
+
+            </template>
+            <lightning-button 
+                title="Submit Quiz" variant="brand" type="submit" label="Submit" class="slds-m-around_small" onclick={submitHandler} disabled={allNotSelected}></lightning-button> 
+            <lightning-button title="Reset Quiz" variant="brand" type="reset" label="Reset" class="slds-m-around_small" onclick={resetHandler}></lightning-button> 
+        </form>
+        <template lwc:if={isSubmitted} >
+            <div class={answerStyle}>You have scored {correctAnswer} correct answers out of {quizQuestion.length}</div>
+        </template> 
+        </div>
+    </lightning-card>
+    
+    
+</template>

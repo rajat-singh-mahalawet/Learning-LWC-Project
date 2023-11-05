@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 08-01-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="Slot Parent with footer">
+        <c-slot-child-demo>
+            <p slot="name">My name is Rajat, coming from parent into unnamed slot</p>
+            <p slot="age">My name is 40, coming from parent into unnamed slot</p>
+            <p slot="footer">I am footer</p>
+        </c-slot-child-demo>
+    </lightning-card>
+
+    <lightning-card title="Slot Parent without footer">
+        <c-slot-child-demo>
+            <p slot="name">My name is Rajat, coming from parent into unnamed slot</p>
+            <p slot="age">My name is 40, coming from parent into unnamed slot</p>
+            <!-- <p slot="footer">I am footer</p> -->
+        </c-slot-child-demo>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 08-08-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="Lightning record Edit Form">
+        <lightning-record-edit-form
+        object-api-name={contactObject}
+        >
+        <lightning-messages></lightning-messages>
+        <lightning-input-field field-name={fields.accountField}></lightning-input-field>
+        <lightning-input-field field-name={fields.nameField}></lightning-input-field>
+        <lightning-input-field field-name={fields.phoneField}></lightning-input-field>
+        <lightning-input-field field-name={fields.titleField}></lightning-input-field>
+        <lightning-input-field field-name={fields.emailField}></lightning-input-field>
+        <lightning-button class="slds-m-around_xx-small" label="cancel" onclick={resetFields}></lightning-button>
+        <lightning-button type="submit" variant="brand" class="slds-m-around_xx-small" label="Save"></lightning-button>
+    </lightning-record-edit-form>
+    </lightning-card>
+    
+</template>

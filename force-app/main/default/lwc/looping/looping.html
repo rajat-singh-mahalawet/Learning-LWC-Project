@@ -1,0 +1,50 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 07-10-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card  title="for:each loop on Array">
+        <div class ="slds-var-m-around_large">
+            <template for:each={carList} for:item="Car" for:index="Counter">
+                <ul key={Car} class="slds-has-dividers_around-space">
+                    <li class="slds-item">{Counter}. {Car}</li>
+                </ul>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="for:each loop on Array Object">
+        <div class ="slds-var-m-around_large">
+            <template for:each={ceoList} for:item="currentItem" for:index="Counter">
+                <ul key={currentItem.id} class="slds-has-dividers_around-space">
+                    <li class="slds-item">{currentItem.id}. <strong>{currentItem.company}</strong> {currentItem.name}</li>
+                </ul>
+            </template>
+        </div>
+    </lightning-card>
+    
+
+    <lightning-card  title="iterator on Array Object">
+        <div class ="slds-var-m-around_large">
+            <template iterator:currentitem={ceoList}>
+                <ul key={currentitem.value.id} class="slds-has-dividers_around-space">
+                    <template lwc:if={currentitem.first}>
+                        <div class = "slds-box slds-theme_shade">
+                            Below is the list of companies and Ceo's
+                        </div>
+                    </template>
+                    <li class="slds-item">{currentitem.value.id}. <strong>{currentitem.value.company}</strong> {currentitem.value.name}</li>
+                    <template lwc:if={currentitem.last}>
+                        <div class = "slds-box slds-theme_shade">
+                            End of list
+                        </div>
+                    </template>
+                </ul>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>

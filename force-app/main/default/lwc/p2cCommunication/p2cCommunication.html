@@ -1,0 +1,27 @@
+<!--
+  @description       : uses kebab case for attributes, boolean is true if left without value
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 07-31-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <c-p2c-child-component
+    message="I am from Parent"
+    card-heading="Parent to Child communication"
+    ></c-p2c-child-component>
+
+    <!-- Calling Modal and closing Modal calling Parent-->
+
+    <lightning-card title="Child to Parent using simple Event">
+        <div class ="slds-var-m-around_large" onclose = {closeHandler}>
+
+            <lightning-button variant="brand" label="Show" title="Show Modal" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            <h1>{msg}</h1>
+            <template lwc:if={showModal}>
+                <c-p2c-modal-component></c-p2c-modal-component>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

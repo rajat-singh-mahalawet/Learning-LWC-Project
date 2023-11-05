@@ -1,0 +1,40 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 07-10-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card  title="Conditional Example">
+        <div class ="slds-var-m-around_large">
+            <lightning-button 
+                variant="brand" 
+                label={getLabel} 
+                title="Primary action" 
+                onclick={handleClick}
+                class="slds-var-m-left_x-small">
+            </lightning-button>
+            <template lwc:if={data.isVisible}>
+                <div>Welcome to the world of magic.</div>
+                <div>Please click the button to hide the data.</div>
+            </template>
+            <template lwc:else>
+                <div>Please click the button to see the data.</div>
+            </template>
+        </div>
+
+        <div class ="slds-var-m-around_large">
+            <lightning-input 
+                type="text"
+                label="Enter hello to view data"
+                onkeyup={changeHandler}>
+            </lightning-input>
+
+            <template if:true={nameValue}>
+                <div>Horray!!</div>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

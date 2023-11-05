@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="getPicklistValues by field">
+        <template lwc:if={industryOptions}>
+            <lightning-combobox
+                name="Industry"
+                label="Account Industry"
+                value={selectedValue}
+                placeholder="Select Industry"
+                options={industryOptions}
+                onchange={handleChange} >
+            </lightning-combobox>
+        </template>                                         
+
+<p>Selected value is: {selectedValue}</p>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 07-25-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="Dynamic CSS">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="number" label="Enter Percentage" value={percent} onkeyup={changeHandler}></lightning-input>
+            <div style={percentWidth} class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+                Hi I am an Alert!!!
+            </div>
+        </div>
+    </lightning-card>
+    
+    
+</template>

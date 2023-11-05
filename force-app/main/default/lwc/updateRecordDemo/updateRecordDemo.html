@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 08-19-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="update record">
+        <div class="slds-var-p-around_medium">
+            <lightning-datatable
+                key-field="Id"
+                data={contactData}
+                columns={columns}
+                hide-checkbox-column
+                draft-values={draftValues}
+                onsave={handleSave}>
+            </lightning-datatable>
+            </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 06-14-2023
+  @last modified by  : Rajat M
+-->
+<template>
+
+    <lightning-card  title="Two way Databinding">
+        <div class ="slds-var-m-around_large">
+            <lightning-input type="text" label="Enter some text" onkeyup={courseChangeHandler}></lightning-input>
+            <div>{data.name} belongs to {course} and data object value is {data.course}</div>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="Getter Example">
+        <div class ="slds-var-m-around_large">
+            <div>The sum is {num1} and {num2} is {sumNumbers}</div>
+        </div>
+    </lightning-card>
+
+</template>

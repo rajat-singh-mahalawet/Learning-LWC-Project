@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 08-19-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="create record">
+        <div class="slds-var-p-around_medium">
+            <form class="input-form">
+            <lightning-input type="text" label="First Name" name="FirstName" onchange={handleInputChange}></lightning-input>
+            <lightning-input type="text" label="Last Name" name="LastName" onchange={handleInputChange}></lightning-input>
+            <lightning-input type="text" label="Phone" name="Phone" onchange={handleInputChange}></lightning-input>
+            <lightning-input type="email" label="Email" name="Email" onchange={handleInputChange}></lightning-input>
+            <lightning-button label="Create Contact" variant="brand" onclick={createContact}></lightning-button>
+        </form>
+        </div>
+    
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,35 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 08-18-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="list UI">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={contacts} for:item="contact">
+                <tr key={contact.fields.Id.value}>
+                    <td>{contact.fields.Name.value}</td>
+                    <td>{contact.fields.Email.value}</td>
+                    <td>{contact.fields.Title.value}</td>
+                </tr>
+            </template>
+            </tbody>
+        </table>
+        <div>
+            <lightning-button variant="brand" label="Previous" title="Previous" onclick={handlePreviousClick} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand" label="Next" title="Next" onclick={handleNextClick} class="slds-m-left_x-small"></lightning-button>
+        </div> 
+
+    </lightning-card>
+    
+</template>

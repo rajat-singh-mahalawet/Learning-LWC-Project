@@ -1,0 +1,33 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 08-21-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="Apex with Param Wire Property">
+        <template lwc:if={accounts.data}>
+            <template for:each={accounts.data} for:item=account>
+                <div class="slds-box" key={account.Id}>
+                    <p>Name - {account.Name}</p>
+                    <p>Type - {account.Type}</p>
+                    <p>Industry - {account.Industry}</p>
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="Apex Wire function">
+        <template lwc:if={accountList}>
+            <template for:each={accountList} for:item=account>
+                <div class="slds-box" key={account.Id}>
+                    <p>Name - {account.Name}</p>
+                    <p>Type - {account.newType}</p>
+                    <p>Industry - {account.Industry}</p>
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+    
+</template>

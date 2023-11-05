@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : Rajat M
+  @group             : 
+  @last modified on  : 08-19-2023
+  @last modified by  : Rajat M
+-->
+<template>
+    <lightning-card title="get record ui">
+        <template lwc:if={data1}>
+        <div style="height: 300px;">
+            <lightning-datatable
+                    key-field={recordId}
+                    data={data1}
+                    columns={column}
+                    hide-checkbox-column
+                    >
+            </lightning-datatable>
+        </div>
+    </template>
+    </lightning-card>
+    
+</template>
