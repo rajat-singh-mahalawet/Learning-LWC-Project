@@ -11,7 +11,7 @@ public with sharing class AnonymousApex {
         Cloud_News__e newsEvent = new Cloud_News__e(
            Location__c='Sydney City',
            Urgent__c=true,
-           News_Content__c='Lake Road is closed due to mudslides2.');
+           News_Content__c='Lake Road is closed due to mudslides3.');
             // Call method to publish events
             Database.SaveResult sr = EventBus.publish(newsEvent);
             // Inspect publishing result
