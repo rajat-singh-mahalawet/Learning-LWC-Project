@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : Rajat M
  * @group             : 
- * @last modified on  : 11-03-2023
+ * @last modified on  : 11-05-2023
  * @last modified by  : Rajat M
 **/
 public with sharing class AnonymousApex {
@@ -23,6 +23,7 @@ public with sharing class AnonymousApex {
                                 err.getStatusCode() +
                                 ' - ' +
                                 err.getMessage());
+                    system.debug('Ok');
                 }
             }
 
