@@ -23,7 +23,7 @@ public with sharing class AnonymousApex {
                                 err.getStatusCode() +
                                 ' - ' +
                                 err.getMessage());
-                    system.debug('Ok');
+                    system.debug('Not Ok');
                 }
             }
 
